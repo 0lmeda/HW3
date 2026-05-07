@@ -60,6 +60,17 @@ features removed noise and helped every model focus on the most variables.
 
 KNN improved the most (+5.11%) because fewer features made distance
 caclculations more meaningful.
+
 Gaussian NB improved by +5.49% because removing correlated features
 reduced violations of the indepedence assumption.
+
 The Neural network improved by +5.91% with clean input data.
+
+logistic Regression remained the best overall model in both parts.
+
+**Limitations:**
+*Forward Selection is greedy and may miss the truly optimal subset.
+
+*The Neural Network never fully converged (Due to the iterations)
+
+*Class imbalance was not addressed and could affect minority class predictions.
