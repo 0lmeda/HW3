@@ -1,18 +1,17 @@
 # CSCI 3329 Homework #3
 
 **Student:** Jose Olmeda
-
 **Dataset:** Predict Students' Dropout and Academic Success
 
-A college collected data on their students to predict who will drop out, stay enrolled, or graduate.
-The data includes things like the student's background, demographics, and their grades after the first and second semester.
-The dataset has 3 possible outcomes — Dropout, Enrolled, or Graduate — but it's unbalanced, meaning one outcome appears way more than the others (in this case, Graduate is ~50% of the data).
-
-## DataSet
+## Dataset
 **Source:** UCI Machine Learning Repository
 **Samples:** 4,424
 **Features:** 36
 **Classes:** 3 - Dropout, Enrolled, Graduate
+
+A college collected data on their students to predict who will drop out, stay enrolled, or graduate.
+The data includes things like the student's background, demographics, and their grades after the first and second semester.
+The dataset has 3 possible outcomes — Dropout, Enrolled, or Graduate — but it's unbalanced, meaning one outcome appears way more than the others (in this case, Graduate is ~50% of the data).
 
 ## Algorithm Comparison
 10-fold cross validation repeated 100 times (1,000 evaluations per model).
@@ -25,23 +24,30 @@ The dataset has 3 possible outcomes — Dropout, Enrolled, or Graduate — but i
 | Gaussian NB | 0.6786 | 0.0224 |
 | Neural Network | 0.7114 | 0.0212 |
 
-Logistic Regression perfomed best. The decision boundaries between the rhee classes appear mostly linear, which favors this model.
-Gaussian NB was the weakest one, because it assumes all features are independent, which in this case it is not true at all.
-KNN Struggled because with 36 features, distance calculations become less reliable.
-Neural Network did not fully converge, limiting its perfomance.
+Logistic Regression performed best. The decision boundaries between the three
+classes appear mostly linear, which favors this model.
 
-In summary, the gap between logistic regression and the others is larger than their standard deviations, only confirming that there's a reak difference and not random vaqriation.
+Gaussian NB was the weakest because it assumes all features are independent,
+which in this case is not true at all.
+
+KNN struggled because with 36 features, distance calculations become less reliable.
+
+The Neural Network did not fully converge, limiting its performance.
+
+In summary, the gap between Logistic Regression and the others is larger than
+their standard deviations, confirming that there is a real difference and not
+random variation.
 
 ## Feature Selection
-**Method:** Forward Selection using 'SequentialFeatureSelector'.
+**Method:** Forward Selection using `SequentialFeatureSelector`.
 
 Exhaustive search was not used because with m=36 features there are over
-68 billion possible subsets and the pc would take a long time. 
+68 billion possible subsets and the PC would take too long to finish.
 Forward Selection was chosen instead, which adds one feature at a
-time and costs roughly O(m^2) evaluations.
+time and costs roughly O(m²) evaluations.
 
-Note: 'n_repeats' was reduced from 100 to 10 during feature selection
-due to computational constrains.
+Note: `n_repeats` was reduced from 100 to 10 during feature selection
+due to computational constraints.
 
 | Algorithm | Features Selected | Mean Accuracy | Std |
 |-----------|-------------------|---------------|-----|
@@ -51,7 +57,7 @@ due to computational constrains.
 | Gaussian NB | 18 | 0.7335 | 0.0215 |
 | Neural Network | 18 | 0.7705 | 0.0195 |
 
-## 5. Discussion
+## Discussion
 
 | Algorithm | Part 2 | Part 3 | Change |
 |-----------|--------|--------|--------|
@@ -62,25 +68,19 @@ due to computational constrains.
 | Neural Network | 0.7114 | 0.7705 | +0.0591 |
 
 All five models improved after feature selection. Dropping from 36 to 18
-features removed noise and helped every model focus on the most variables.
+features removed noise and helped every model focus on the most informative variables.
 
--KNN improved the most (+5.11%) because fewer features made distance
-caclculations more meaningful.
-
--Gaussian NB improved by +5.49% because removing correlated features
-reduced violations of the indepedence assumption.
-
--The Neural network improved by +5.91% with clean input data.
-
--Logistic Regression remained the best overall model in both parts.
+- KNN improved the most (+5.11%) because fewer features made distance
+calculations more meaningful.
+- Gaussian NB improved by +5.49% because removing correlated features
+reduced violations of the independence assumption.
+- The Neural Network improved by +5.91% with cleaner input data.
+- Logistic Regression remained the best overall model in both parts.
 
 **Limitations:**
-
--Forward Selection is greedy and may miss the truly optimal subset.
-
--The Neural Network never fully converged (Due to the iterations)
-
--Class imbalance was not addressed and could affect minority class predictions.
+- Forward Selection is greedy and may miss the truly optimal subset.
+- The Neural Network never fully converged due to iteration limits.
+- Class imbalance was not addressed and could affect minority class predictions.
 
 ## Reproduction
 **Python version:** 3.10+
