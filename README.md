@@ -58,19 +58,35 @@ due to computational constrains.
 All five models improved after feature selection. Dropping from 36 to 18
 features removed noise and helped every model focus on the most variables.
 
-KNN improved the most (+5.11%) because fewer features made distance
+-KNN improved the most (+5.11%) because fewer features made distance
 caclculations more meaningful.
 
-Gaussian NB improved by +5.49% because removing correlated features
+-Gaussian NB improved by +5.49% because removing correlated features
 reduced violations of the indepedence assumption.
 
-The Neural network improved by +5.91% with clean input data.
+-The Neural network improved by +5.91% with clean input data.
 
-logistic Regression remained the best overall model in both parts.
+-Logistic Regression remained the best overall model in both parts.
 
 **Limitations:**
+
 -Forward Selection is greedy and may miss the truly optimal subset.
 
 -The Neural Network never fully converged (Due to the iterations)
 
 -Class imbalance was not addressed and could affect minority class predictions.
+
+## Reproduction
+**Python version:** 3.10+
+
+**Install dependencies:**
+```bash
+pip install pandas numpy scikit-learn
+```
+
+**Run:**
+```bash
+python hw3.py
+```
+
+**Seeds:** `random_state=42` for all models and CV objects.
