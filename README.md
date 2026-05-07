@@ -1,5 +1,7 @@
 # CSCI 3329 Homework #3
+
 **Student:** Jose Olmeda
+
 **Dataset:** Predict Students' Dropout and Academic Success
 
 ## DataSet
