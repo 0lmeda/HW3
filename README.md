@@ -4,6 +4,10 @@
 
 **Dataset:** Predict Students' Dropout and Academic Success
 
+A college collected data on their students to predict who will drop out, stay enrolled, or graduate.
+The data includes things like the student's background, demographics, and their grades after the first and second semester.
+The dataset has 3 possible outcomes — Dropout, Enrolled, or Graduate — but it's unbalanced, meaning one outcome appears way more than the others (in this case, Graduate is ~50% of the data).
+
 ## DataSet
 **Source:** UCI Machine Learning Repository
 **Samples:** 4,424
