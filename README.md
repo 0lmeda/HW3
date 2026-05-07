@@ -54,3 +54,12 @@ due to computational constrains.
 | KNN | 0.6966 | 0.7477 | +0.0511 |
 | Gaussian NB | 0.6786 | 0.7335 | +0.0549 |
 | Neural Network | 0.7114 | 0.7705 | +0.0591 |
+
+All five models improved after feature selection. Dropping from 36 to 18
+features removed noise and helped every model focus on the most variables.
+
+KNN improved the most (+5.11%) because fewer features made distance
+caclculations more meaningful.
+Gaussian NB improved by +5.49% because removing correlated features
+reduced violations of the indepedence assumption.
+The Neural network improved by +5.91% with clean input data.
