@@ -11,12 +11,13 @@
 ## Algorithm Comparison
 10-fold cross validation repeated 100 times (1,000 evaluations per model).
 
-Algorithm           | Mean Accuracy  | Std |
-Linear Classifier   |    0.7040      | 0.0269 |
-Logistic Regression |    0.7653      | 0.0192 |
-KNN                 |    0.6966      | 0.0203 |
-Gaussian NB         |    0.6786      | 0.0224 |
-Neural Network      |    0.7114      | 0.0212 |
+| Algorithm | Mean Accuracy | Std |
+|-----------|---------------|-----|
+| Linear Classifier | 0.7040 | 0.0269 |
+| Logistic Regression | 0.7653 | 0.0192 |
+| KNN | 0.6966 | 0.0203 |
+| Gaussian NB | 0.6786 | 0.0224 |
+| Neural Network | 0.7114 | 0.0212 |
 
 Logistic Regression perfomed best. The decision boundaries between the rhee classes appear mostly linear, which favors this model.
 Gaussian NB was the weakest one, because it assumes all features are independent, which in this case it is not true at all.
