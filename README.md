@@ -69,8 +69,8 @@ The Neural network improved by +5.91% with clean input data.
 logistic Regression remained the best overall model in both parts.
 
 **Limitations:**
-*Forward Selection is greedy and may miss the truly optimal subset.
+-Forward Selection is greedy and may miss the truly optimal subset.
 
-*The Neural Network never fully converged (Due to the iterations)
+-The Neural Network never fully converged (Due to the iterations)
 
-*Class imbalance was not addressed and could affect minority class predictions.
+-Class imbalance was not addressed and could affect minority class predictions.
