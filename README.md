@@ -1,13 +1,18 @@
 # CSCI 3329 Homework #3
 
 **Student:** Jose Olmeda
+
 **Dataset:** Predict Students' Dropout and Academic Success
 
 ## Dataset
 **Source:** UCI Machine Learning Repository
+
 **Samples:** 4,424
+
 **Features:** 36
+
 **Classes:** 3 - Dropout, Enrolled, Graduate
+
 
 A college collected data on their students to predict who will drop out, stay enrolled, or graduate.
 The data includes things like the student's background, demographics, and their grades after the first and second semester.
@@ -117,13 +122,5 @@ python hw3.py
 
 Seeds: random_state=42 for all models; random_state=17342 for all CV objects.ShareContentpdf# CSCI 3329 Homework #3
 
-**Student:** Jose Olmeda
-**Dataset:** Predict Students' Dropout and Academic Success
-
-## Dataset
-**Source:** UCI Machine Learning Repository
-**Samples:** 4,424
-**Features:** 36
-**Classes:** 3 - Dropout, Enrolled, Graduate
 
 A college collected data on their students to predicpasted
