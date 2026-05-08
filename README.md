@@ -13,6 +13,26 @@ A college collected data on their students to predict who will drop out, stay en
 The data includes things like the student's background, demographics, and their grades after the first and second semester.
 The dataset has 3 possible outcomes — Dropout, Enrolled, or Graduate — but it's unbalanced, meaning one outcome appears way more than the others (in this case, Graduate is ~50% of the data).
 
+## Preprocessing
+
+The dataset was loaded from a semicolon-separated CSV file. There were no missing values, so no rows were removed. There was no 'id' column to drop.
+
+All 36 features are already numbers, so no encoding was needed it. The target column had text ables like Dropout, Enrolled, and Graduate, so 'labelEncoder' was used to turn those into numbers.
+
+StandScaler was applied to all 36 features so they are on the same scale.
+
+`StandardScaler` was applied to all 36 features so they are on the same scale.
+This is especially important for KNN and the Neural Network, which perform poorly when features have very different ranges.
+
+| Step | What was done |
+|------|---------------|
+| Missing values | None found — no rows removed |
+| ID column | Dropped if present |
+| Feature encoding | Not needed — all features are already numeric |
+| Target encoding | `LabelEncoder` converted text labels to integers |
+| Scaling | `StandardScaler` applied to all 36 features |
+
+
 ## Algorithm Comparison
 10-fold cross validation repeated 100 times (1,000 evaluations per model).
 
