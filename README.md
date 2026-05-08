@@ -122,5 +122,3 @@ python hw3.py
 
 Seeds: random_state=42 for all models; random_state=17342 for all CV objects.ShareContentpdf# CSCI 3329 Homework #3
 
-
-A college collected data on their students to predicpasted
