@@ -26,11 +26,11 @@ This is especially important for KNN and the Neural Network, which perform poorl
 
 | Step | What was done |
 |------|---------------|
-| Missing values | None found — no rows removed |
+| Missing values | None found  no rows removed |
 | ID column | Dropped if present |
-| Feature encoding | Not needed — all features are already numeric |
-| Target encoding | `LabelEncoder` converted text labels to integers |
-| Scaling | `StandardScaler` applied to all 36 features |
+| Feature encoding | Not needed  all features are already numeric |
+| Target encoding | LabelEncoder converted text labels to integers |
+| Scaling | StandardScaler applied to all 36 features |
 
 
 ## Algorithm Comparison
